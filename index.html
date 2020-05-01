@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PoroqCorona | Website Informasi Corona</title>
+    <link
+      rel="shortcut icon"
+      href="./images/PoroqCorona.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style/css/style.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar">
+            <div class="navbar__menu">
+              <h3 class="navbar__menu--text">Menu</h3>
+              <img src="./icons/menu-outline.svg" alt="" />
+            </div>
+            <div class="navbar__logo">
+              <img src="./images/logo-poroq-corona.svg" alt="" />
+            </div>
+            <div class="navbar__search">
+              <img src="./icons/search-outline.svg" alt="" />
+              <h3 class="navbar__search--text">Cari</h3>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <header class="header">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="header__text">
+              <h1 class="header__text--heading">
+                Nikmati informasi COVID-19 dengan CoffeePait-1Gelas.
+              </h1>
+              <p class="header__text--para">
+                Situs ini merupakan sumber informasi untuk corona, diharapkan
+                rakyat tetap santuy, hanya fetch API saja, terimakasih
+                KawalCorona.com dan KawalCovid19.id, sudah memberikan API dan
+                inspirasi desain. IonIcons, serta Google Fonts. Terimakasih
+                semuanya atas gratisannya :)
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="header__ill">
+              <img
+                class="header__ill--img"
+                src="./images/header-ill.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="case">
+        <div class="case__heading">
+          <h1 class="case__heading--title">TOTAL KASUS</h1>
+          <p>Data dari Kemenkes RI</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="case__card case__card--confirmed">
+              <h2>7776</h2>
+              <p>Terkonfirmasi</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="case__card case__card--treatment">
+              <h2>6168</h2>
+              <p>Dalam Perawatan</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="case__card case__card--recover">
+              <h2>960</h2>
+              <p>Sembuh</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="case__card case__card--died">
+              <h2>647</h2>
+              <p>Meninggal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="region">
+        <div class="region__heading">
+          <h1 class="region__heading--title">KASUS PER DAERAH</h1>
+          <p>Data Per Provinsi</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-9">
+                <div class="row">
+                  <form action="#" class="region__search">
+                    <input
+                      class="region__search--input"
+                      type="text"
+                      name="daerah"
+                      placeholder="Silahkan masukkan nama daerah yang ingin dicari"
+                    />
+                    <button class="region__search--btn">
+                      <img src="./icons/search-outline-white.svg" alt="" />
+                    </button>
+                  </form>
+                </div>
+
+                <div class="region__cardContainer d-none">
+                  <div class="region__card--heading">
+                    <h3>Nusa Tenggara Barat</h3>
+                    <p>27 April 2020</p>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="region__card region__card--confirmed">
+                        <h2>206</h2>
+                        <p>Positif</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="region__card region__card--recover">
+                        <h2>22</h2>
+                        <p>Sembuh</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="region__card region__card--died">
+                        <h2>4</h2>
+                        <p>Meninggal</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3">
+                <div class="region__cardSide">
+                  <div class="region__cardSide--heading">
+                    <h2>DATA NASIONAL</h2>
+                  </div>
+
+                  <div class="region__cardSide--content">
+                    <div class="region__cardSide--img">
+                      <img src="./images/Jakarta.png" alt="" />
+                    </div>
+                    <div class="region__cardSide--text region__cardSide--1">
+                      <h4>DKI Jakarta</h4>
+                      <p class="positif">Positif : 3684</p>
+                      <p class="sembuh">Sembuh : 334</p>
+                      <p class="meninggal">Meninggal : 346</p>
+                    </div>
+                  </div>
+
+                  <div class="region__cardSide--content">
+                    <div class="region__cardSide--img">
+                      <img src="./images/Jawa Barat.png" alt="" />
+                    </div>
+                    <div class="region__cardSide--text region__cardSide--2">
+                      <h4>JAWA BARAT</h4>
+                      <p class="positif">Positif : 907</p>
+                      <p class="sembuh">Sembuh : 93</p>
+                      <p class="meninggal">Meninggal : 77</p>
+                    </div>
+                  </div>
+
+                  <div class="region__cardSide--content">
+                    <div class="region__cardSide--img">
+                      <img src="./images/Jawa Timur.png" alt="" />
+                    </div>
+                    <div class="region__cardSide--text region__cardSide--3">
+                      <h4>JAWA TIMUR</h4>
+                      <p class="positif">Positif : 770</p>
+                      <p class="sembuh">Sembuh : 133</p>
+                      <p class="meninggal">Meninggal : 75</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="socmed">
+        <div class="socmed__heading">
+          <h1 class="socmed__heading--title">SOSIAL MEDIA</h1>
+          <p>Ikuti Sekarang Juga</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="socmed__card socmed__card--facebook">
+              <img
+                class="socmed__card--icon"
+                src="./icons/logo-facebook.svg"
+                alt=""
+              />
+              <h2>PoroqCorona</h2>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="socmed__card socmed__card--twitter">
+              <img
+                class="socmed__card--icon"
+                src="./icons/logo-twitter.svg"
+                alt=""
+              />
+              <h2>PoroqCorona</h2>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="socmed__card socmed__card--instagram">
+              <img
+                class="socmed__card--icon"
+                src="./icons/logo-instagram.svg"
+                alt=""
+              />
+              <h2>PoroqCorona</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        &copy; COPYRIGHT 2020 BY POROQCORONA | ALL RIGHTS RESERVED
+      </footer>
+    </div>
+
+    <script src="./js/apiCorona.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

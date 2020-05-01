@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+  left: 0;
+  min-height: 48rem;
+  background-color: $blue-dark;
+  color: $gray;
+  display: flex;
+  border-radius: 1.6rem;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    padding-left: 8rem;
+    padding-right: 5rem;
+
+    &--heading {
+      font-family: $font-pop-semibold;
+      font-size: 3.6rem;
+      margin-bottom: 0.8rem;
+    }
+
+    &--para {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__ill {
+    padding-right: 8rem;
+
+    &--img {
+      max-height: 30rem;
+    }
+  }
+}

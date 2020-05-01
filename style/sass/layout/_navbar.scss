@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  height: 8rem;
+
+  &__menu,
+  &__search {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat-Regular", sans-serif;
+  }
+
+  &__menu {
+    &--text {
+      font-size: 1.4rem;
+
+      margin-right: 1rem;
+    }
+  }
+
+  &__search {
+    &--text {
+      font-size: 1.4rem;
+
+      margin-left: 1rem;
+    }
+  }
+
+  &__logo {
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 20px;
+  }
+}
