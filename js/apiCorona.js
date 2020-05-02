@@ -104,9 +104,16 @@ const UpdateUIDaerah = (data) => {
     "Desember",
   ];
 
-  const dinoIki = `${date.getDay()} ${
-    monthNames[date.getMonth()]
-  } ${date.getFullYear()} | ${date.getHours()}:${date.getMinutes()}`;
+  const dinoIki = `
+    ${date.getDay()}
+    ${monthNames[date.getMonth()]}
+    ${date.getFullYear()} |
+    ${date.toLocaleString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    })}
+  `;
 
   dataKu.filter((data) => {
     regionName_h3.textContent = data.Provinsi;
