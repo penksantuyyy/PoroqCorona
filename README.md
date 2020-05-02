@@ -16,6 +16,7 @@
 - Belum fitur pencarian pada navbar (1 Page juga heuehu)
 
 Website ini adalah website untuk melakukan pengecekan terhadap pandemi COVID-19 di Indonesia.
+
 **Untuk API didapat dari**
 
 - Kawalcovid19.id (rangkuman)
@@ -26,6 +27,7 @@ Website ini adalah website untuk melakukan pengecekan terhadap pandemi COVID-19 
 - Ionicons.com
 
 **Untuk fonts didapat dari**
+
 Google Fonts :
 
 - Poppins
@@ -35,8 +37,10 @@ Google Fonts :
 
 - Flatuicolors.com
 
+**Keterangan**
+
 > Ini adalah website pertama yang saya buat menggunakan Vanilla Javascript
 > Jadi jika ada kekurangan itu dari saya semata, jika ada kelebihan itu dariNya semua.
 > Much Love & Respect
 
-### **Bung Apenk - PenkSantuyyy**
+#### **Bung Apenk - PenkSantuyyy**
