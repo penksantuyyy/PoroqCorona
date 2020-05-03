@@ -9,11 +9,16 @@
 - Fitur searching untuk tiap daerah
 - SCSS Supported (BEM Methodology Class)
 
+### Update 1.1
+
+- Code Lebih Clean dengan OOP
+
 ## **Minus**
 
 - Gambar pada sidebar Data Nasional tidak update sesuai daerah
 - Navbar belum diisi kontent (Masih 1 Pages)
 - Belum fitur pencarian pada navbar (1 Page juga heuehu)
+- Belum Responsive (Tablet/ Smartphone)
 
 Website ini adalah website untuk melakukan pengecekan terhadap pandemi COVID-19 di Indonesia.
 
@@ -22,20 +27,24 @@ Website ini adalah website untuk melakukan pengecekan terhadap pandemi COVID-19 
 - Kawalcovid19.id (rangkuman)
 - Kawalcorona.com (per daerah)
 
+**Untuk Illustrasi didapat dari**
+
+- Iconfinder : [Link](https://www.iconfinder.com/p/coronavirus-awareness-icons)
+
 **Untuk Icons didapat dari**
 
-- Ionicons.com
+- Ionicons : [Link]('https://ionicons.com/')
 
 **Untuk fonts didapat dari**
 
 Google Fonts :
 
-- Poppins
-- Montserrat
+- Poppins : [Link]('https://fonts.google.com/specimen/Poppins')
+- Montserrat : [Link]('https://fonts.google.com/specimen/Montserrat')
 
 **Untuk Warna didapat dari**
 
-- Flatuicolors.com
+- Flatuicolors : [Link]('https://flatuicolors.com/')
 
 **Keterangan**
 
@@ -43,4 +52,4 @@ Google Fonts :
 > Jadi jika ada kekurangan itu dari saya semata, jika ada kelebihan itu dariNya semua.
 > Much Love & Respect
 
-#### **Bung Apenk - PenkSantuyyy**
+###### **Bung Apenk - PenkSantuyyy**
