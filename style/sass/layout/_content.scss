@@ -36,6 +36,7 @@
 
     h2 {
       font-size: 3.6rem;
+      font-family: $font-pop-semibold;
     }
 
     p {
@@ -81,7 +82,6 @@
   &__search {
     display: flex;
     align-items: center;
-    margin-bottom: 4.8rem;
 
     &--input {
       min-width: 83.5rem;
@@ -115,6 +115,10 @@
     }
   }
 
+  &__cardContainer {
+    margin-top: 2.4rem;
+  }
+
   &__card {
     display: flex;
     flex-direction: column;
@@ -133,6 +137,7 @@
 
     h2 {
       font-size: 3.6rem;
+      font-family: $font-pop-semibold;
     }
 
     p {
@@ -168,11 +173,21 @@
         color: $black-light-2;
       }
     }
+
+    &--text {
+      display: flex;
+      align-items: center;
+    }
+
+    &--close {
+      margin-top: 4px;
+      margin-left: 1.6rem;
+      cursor: pointer;
+    }
   }
 
   &__cardSide {
     padding: 2.4rem;
-    height: 42rem;
     background-color: $gray-light;
     border-radius: 1.6rem;
 
@@ -211,6 +226,35 @@
         font-size: 1.4rem;
         color: #828282;
       }
+    }
+  }
+
+  &__proContainer {
+    list-style-type: none;
+    min-width: 82.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.4rem;
+  }
+
+  &__province {
+    background-color: $green;
+    padding: 1.6rem 2.4rem;
+    margin-right: 2.4rem;
+    margin-bottom: 1.6rem;
+    font-size: 14px;
+    font-family: $font-mont-semibold;
+    color: $gray;
+    border-radius: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+
+    &:nth-child(14) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $green-dark;
     }
   }
 }
@@ -264,5 +308,197 @@
 
   .row {
     margin: 4.8rem 0 6.4rem 0;
+  }
+}
+
+.chat {
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 2.4rem;
+  right: 2.4rem;
+  cursor: pointer;
+
+  &__icoContainer {
+    width: 6.4rem;
+    height: 6.4rem;
+    background-color: $blue-medium;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    box-shadow: -2px 4px 16px -8px rgb(223, 222, 223);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__icoContainer:hover {
+    background-color: $blue-light;
+    box-shadow: 0px 8px 16px -8px rgba(143, 123, 143, 1);
+  }
+}
+
+.room {
+  &__heading {
+    display: flex;
+    align-items: center;
+    padding: 3.6rem 0;
+
+    &--title {
+      margin-right: 1.6rem;
+      font-family: $font-pop-semibold;
+    }
+
+    p {
+      color: $black-light-2;
+    }
+  }
+
+  .row {
+    margin-bottom: 4.8rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 255px;
+    height: 255px;
+    border-radius: 1.6rem;
+    color: $gray;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba($color: #505050, $alpha: 0.2);
+      transform: scale(1.05);
+    }
+
+    h2 {
+      font-size: 3.6rem;
+      font-family: $font-pop-semibold;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    &--confirmed {
+      background-color: $purple;
+    }
+
+    &--treatment {
+      background-color: $yellow;
+    }
+
+    &--recover {
+      background-color: $green;
+    }
+
+    &--died {
+      background-color: $red;
+    }
+  }
+}
+
+.chatting {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4.8rem;
+
+  &__cardContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: $gray-light;
+    border-radius: 1.6rem;
+    padding: 1.6rem 3.4rem 2.4rem 3.2rem;
+    max-width: 445px;
+    height: auto;
+    margin-bottom: 1.6rem;
+    position: relative;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    padding: 3.6rem 0;
+
+    &--title {
+      margin-right: 1.6rem;
+      font-family: $font-pop-semibold;
+    }
+
+    p {
+      color: $black-light-2;
+    }
+  }
+
+  &__image {
+    max-width: 4.8rem;
+    max-height: 4.8rem;
+    margin-top: 1.6rem;
+    img {
+      max-width: inherit;
+    }
+  }
+
+  &__text {
+    margin-left: 3.2rem;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &--name {
+      font-family: $font-pop-semibold;
+      font-size: 2rem;
+      margin-right: 8px;
+    }
+
+    &--time {
+      font-size: 14px;
+    }
+  }
+
+  &__content {
+    margin-top: 8px;
+    font-size: 1.6rem;
+  }
+
+  &--sender,
+  &--receiver {
+    height: 100%;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 1.6rem;
+      overflow-y: hidden;
+    }
+  }
+
+  &--sender {
+    align-self: flex-end;
+
+    &::before {
+      background-color: $blue-light;
+    }
+  }
+
+  &--receiver {
+    align-self: flex-start;
+
+    &::before {
+      background-color: $green;
+      overflow-y: hidden;
+    }
   }
 }

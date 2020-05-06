@@ -16,6 +16,28 @@
       <div class="row">
         <div class="col-lg-12">
           <nav class="navbar">
+            <div class="navbar__sidepanel">
+              <a class="navbar__sidepanel--close" href="javascript:void(0)">
+                <img src="./icons/close-sidepanel.svg" alt="close sidepanel" />
+              </a>
+              <div class="navbar__sidepanel--list">
+                <a href="index.html">HOME</a>
+                <a href="chatroom.html">CHATROOM</a>
+                <a href="#">BLOG</a>
+                <a href="#">ABOUT</a>
+              </div>
+              <div class="navbar__sidepanel--socmed">
+                <a href="#">
+                  <img src="./icons/logo-facebook.svg" alt="Facebook" />
+                </a>
+                <a href="#">
+                  <img src="./icons/logo-instagram.svg" alt="Instagram" />
+                </a>
+                <a href="#">
+                  <img src="./icons/logo-twitter.svg" alt="Twitter" />
+                </a>
+              </div>
+            </div>
             <div class="navbar__menu">
               <h3 class="navbar__menu--text">Menu</h3>
               <img src="./icons/menu-outline.svg" alt="" />
@@ -117,10 +139,62 @@
                   </form>
                 </div>
 
+                <div class="row">
+                  <div class="col-lg-9">
+                    <ul class="region__proContainer">
+                      <li class="region__province">DKI Jakarta</li>
+                      <li class="region__province">Jawa Timur</li>
+                      <li class="region__province">Jawa Barat</li>
+                      <li class="region__province">Jawa Tengah</li>
+                      <li class="region__province">Sulawesi Selatan</li>
+                      <li class="region__province">Banten</li>
+                      <li class="region__province">Nusa Tenggara Barat</li>
+                      <li class="region__province">Bali</li>
+                      <li class="region__province">Papua</li>
+                      <li class="region__province">Sumatera Barat</li>
+                      <li class="region__province">Kalimantan Selatan</li>
+                      <li class="region__province">Sumatera Selatan</li>
+                      <li class="region__province">Kalimantan Timur</li>
+                      <li class="region__province kalteng">
+                        Kalimantan Tengah
+                      </li>
+                      <li class="region__province">Sumatera Utara</li>
+                      <li class="region__province">Kalimantan Utara</li>
+                      <li class="region__province">
+                        Daerah Istimewa Yogyakarta
+                      </li>
+                      <li class="region__province">Kepulauan Riau</li>
+                      <li class="region__province">Kalimantan Barat</li>
+                      <li class="region__province">Sulawesi Tenggara</li>
+                      <li class="region__province">Sulawesi Tengah</li>
+                      <li class="region__province">Riau</li>
+                      <li class="region__province">Lampung</li>
+                      <li class="region__province">Maluku Utara</li>
+                      <li class="region__province">Sulawesi Utara</li>
+                      <li class="region__province">Sulawesi Barat</li>
+                      <li class="region__province">Papua Barat</li>
+                      <li class="region__province">Jambi</li>
+                      <li class="region__province">Maluku</li>
+                      <li class="region__province">
+                        Kepulauan Bangka Belitung
+                      </li>
+                      <li class="region__province">Gorontalo</li>
+                      <li class="region__province">Aceh</li>
+                      <li class="region__province">Bengkulu</li>
+                      <li class="region__province">Nusa Tenggara Timur</li>
+                    </ul>
+                  </div>
+                </div>
+
                 <div class="region__cardContainer d-none">
                   <div class="region__card--heading">
-                    <h3>Nusa Tenggara Barat</h3>
-                    <p>27 April 2020</p>
+                    <div class="region__card--text">
+                      <h3>Nusa Tenggara Barat</h3>
+                      <p>27 April 2020</p>
+                    </div>
+                    <div class="region__card--close">
+                      <img src="./icons/close-daerah.svg" alt="close daerah" />
+                    </div>
                   </div>
 
                   <div class="row">
@@ -187,6 +261,30 @@
                       <p class="meninggal">Meninggal : 75</p>
                     </div>
                   </div>
+
+                  <div class="region__cardSide--content">
+                    <div class="region__cardSide--img">
+                      <img src="./images/Jawa Tengah.png" alt="" />
+                    </div>
+                    <div class="region__cardSide--text region__cardSide--3">
+                      <h4>JAWA TENGAH</h4>
+                      <p class="positif">Positif : 770</p>
+                      <p class="sembuh">Sembuh : 133</p>
+                      <p class="meninggal">Meninggal : 75</p>
+                    </div>
+                  </div>
+
+                  <div class="region__cardSide--content">
+                    <div class="region__cardSide--img">
+                      <img src="./images/Sulawesi Selatan.png" alt="" />
+                    </div>
+                    <div class="region__cardSide--text region__cardSide--3">
+                      <h4>SULAWESI SELATAN</h4>
+                      <p class="positif">Positif : 770</p>
+                      <p class="sembuh">Sembuh : 133</p>
+                      <p class="meninggal">Meninggal : 75</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -237,6 +335,16 @@
       <footer class="footer">
         &copy; COPYRIGHT 2020 BY POROQCORONA | ALL RIGHTS RESERVED
       </footer>
+
+      <div class="chat">
+        <a href="chatroom.html" class="chat__icoContainer">
+          <img
+            src="./icons/chatbubble-ellipses-outline.svg"
+            alt="chat icon"
+            class="chat__icon"
+          />
+        </a>
+      </div>
     </div>
 
     <script src="./js/apiCorona.js"></script>

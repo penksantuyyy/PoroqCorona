@@ -25,7 +25,7 @@ class DataCorona {
     let dataProv = data.find((dataQue) => {
       const provinsi = dataQue.attributes.Provinsi;
 
-      if (provinsi.toLowerCase().includes(input)) {
+      if (provinsi.toLowerCase() === input) {
         return { dataQue };
       }
     });
@@ -33,10 +33,24 @@ class DataCorona {
     return dataProv;
   };
 
-  getDataCoronaSidebar = (data) => {
-    const dataSide = data.slice(0, 3);
+  getDataCoronaDaerah = (data, daerah) => {
+    let dataDaerah = data.find((dataQue) => {
+      const provinsi = dataQue.attributes.Provinsi;
+      // console.log(typeof provinsi);
+      // console.log(typeof daerah);
 
-    const mappedDataSide = dataSide.map((data) => {
+      if (provinsi.toLowerCase() === daerah.toLowerCase()) {
+        return { dataQue };
+      }
+    });
+    // console.log(dataDaerah);
+    return dataDaerah;
+  };
+
+  getDataCoronaSidebar = (data) => {
+    const dataSidebar = data.slice(0, 5);
+
+    const mappedDataSide = dataSidebar.map((data) => {
       const provinsi = data.attributes.Provinsi,
         positif = data.attributes.Kasus_Posi,
         sembuh = data.attributes.Kasus_Semb,
@@ -44,7 +58,6 @@ class DataCorona {
 
       return { provinsi, positif, sembuh, meninggal };
     });
-
     return mappedDataSide;
   };
 }
@@ -79,7 +92,7 @@ class UpdateUI {
     ];
 
     const dinoIki = `
-      ${date.getDay()}
+      ${date.getDate()}
       ${monthNames[date.getMonth()]}
       ${date.getFullYear()} |
       ${date.toLocaleString("en-US", {
@@ -97,9 +110,19 @@ class UpdateUI {
       meninggal_h2.textContent = data.Kasus_Meni;
     });
 
+    const proContainer_div = document.querySelector(".region__proContainer");
+
     if (regionContainer_div.classList.contains("d-none")) {
+      proContainer_div.classList.add("d-none");
       regionContainer_div.classList.remove("d-none");
     }
+
+    const regionClose = document.querySelector(".region__card--close img");
+
+    regionClose.addEventListener("click", () => {
+      proContainer_div.classList.remove("d-none");
+      regionContainer_div.classList.add("d-none");
+    });
   };
 
   // SIDEBAR UPDATE
@@ -137,6 +160,30 @@ const apiCorona = new GetApi();
 const dataCorona = new DataCorona();
 const updateUI = new UpdateUI();
 
+const filterDaerah = (term) => {
+  const regionProv = Array.from(regionProContainer_ul.children);
+  regionProv
+    .filter((prov) => !prov.textContent.toLowerCase().includes(term))
+    .forEach((prov) => prov.classList.add("d-none"));
+
+  regionProv
+    .filter((prov) => prov.textContent.toLowerCase().includes(term))
+    .forEach((prov) => prov.classList.remove("d-none"));
+};
+
+region_form.addEventListener("keyup", () => {
+  const term = region_form.daerah.value.trim().toLowerCase();
+  const kalteng = document.querySelector(".kalteng");
+
+  filterDaerah(term);
+
+  if (term.length !== 0) {
+    kalteng.style.marginRight = "24px";
+  } else {
+    kalteng.style.marginRight = "0px";
+  }
+});
+
 region_form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -161,3 +208,35 @@ apiCorona
   .then((data) => dataCorona.getDataCoronaSidebar(data))
   .then((data) => updateUI.UpdateUISidebar(data))
   .catch((err) => console.log(err));
+
+// Todo
+// 1. Get nama provinsi parse ke tiap button
+// 2. add event buat nampilin data corona
+
+const regionProContainer_ul = document.querySelector(".region__proContainer");
+const regionProvince_li = document.querySelectorAll(".region__province");
+
+regionProvince_li.forEach((prov) => {
+  prov.addEventListener("click", () => {
+    const regionData = prov.textContent.trim();
+
+    apiCorona
+      .getCoronaApiProvinsi()
+      .then((data) => dataCorona.getDataCoronaDaerah(data, regionData))
+      .then((data) => updateUI.UpdateUIDaerah(data))
+      .catch((err) => console.log(err));
+  });
+});
+
+// SHOW SIDEPANEL
+const menu_nav = document.querySelector(".navbar__menu");
+const sidePanel_nav = document.querySelector(".navbar__sidepanel");
+const sideClose_nav = document.querySelector(".navbar__sidepanel--close");
+
+menu_nav.addEventListener("click", () => {
+  sidePanel_nav.style.width = "48rem";
+});
+
+sideClose_nav.addEventListener("click", () => {
+  sidePanel_nav.style.width = "0";
+});
